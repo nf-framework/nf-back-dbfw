@@ -1,0 +1,29 @@
+{
+  "schema": {
+    "main": "nfc.datatypes",
+    "extract": {
+      "nfc.datatypes": {
+        "type": "json",
+        "valueScoped": true
+      }
+    },
+    "load": {
+      "type": "execSqlArray",
+      "unitField": "$0",
+      "unitData": ":$0",
+      "units": {
+        "nfc.datatypes": {
+          "type": "db",
+          "tablename": "nfc.datatypes",
+          "pk": "id",
+          "uk": ["id"],
+          "fields": [
+            "id",
+            "code",
+            "caption"
+          ]
+        }
+      }
+    }
+  }
+}

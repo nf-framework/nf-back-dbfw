@@ -1,0 +1,37 @@
+[
+{
+	"nfc.datatypes": {
+		"id": "2",
+		"code": "date",
+		"caption": "Дата"
+	}
+},
+{
+	"nfc.datatypes": {
+		"id": "3",
+		"code": "bool",
+		"caption": "Логический"
+	}
+},
+{
+	"nfc.datatypes": {
+		"id": "4",
+		"code": "json",
+		"caption": "Json"
+	}
+},
+{
+	"nfc.datatypes": {
+		"id": "0",
+		"code": "text",
+		"caption": "Строка"
+	}
+},
+{
+	"nfc.datatypes": {
+		"id": "1",
+		"code": "numb",
+		"caption": "Число"
+	}
+}
+]

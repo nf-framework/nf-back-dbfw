@@ -1,0 +1,21 @@
+{
+  "schema": {
+    "main": "nfc.datatypes",
+    "extract": {
+      "nfc.datatypes": {
+        "type": "db",
+        "table": "nfc.datatypes",
+        "pk": "id",
+        "output": "named",
+        "fields": [
+          "id",
+          "code",
+          "caption"
+        ]
+      }
+    },
+    "load":{
+      "type": "jsonString"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "@nfjs/back-dbfw",
+    "version": "1.0.0",
+    "description": "Backend DB framework",
+    "license": "MIT",
+    "type": "module",
+    "main": "index.js",
+    "repository": {
+        "url": "https://github.com/nf-framework/nf-back-dbfw.git"
+    },
+    "author": {
+        "name": "Andrey Maksimov",
+        "email": "andrmaxmail@gmail.com"
+    },
+    "contributors": [
+        {
+            "name": "Dmitry Boikov",
+            "email": "boikovdv@gmail.com"
+        },
+        {
+            "name": "Azat Yamalov",
+            "email": "yamalov.azat@live.com"
+        }
+    ],
+    "dependencies": {
+        "@nfjs/back": "^1.0.0",
+        "@nfjs/core": "^1.0.0",
+        "@nfjs/db-postgres": "^1.0.0",
+        "ajv": "^8.6.0",
+        "ajv-i18n": "^4.1.0",
+        "ajv-formats": "^2.1.0"
+    },
+    "exports": {
+        "./nf-module.js": "./nf-module.js",
+        ".": "./index.js"
+    }
+}

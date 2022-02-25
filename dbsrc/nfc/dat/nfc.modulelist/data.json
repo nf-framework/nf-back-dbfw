@@ -1,0 +1,834 @@
+[
+{
+	"nfc.modulelist": {
+		"code": "nfc",
+		"caption": "Настройки платформы",
+		"#details": [
+			{
+				"nfc.unitlist": {
+					"code": "nfc.datatypes",
+					"caption": "Типы данных для интерфейса",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "ext",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					}
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.ex_system_mapping",
+					"caption": "Внешние системы : маппинг",
+					"pcode": "nfc.ex_systems",
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "self",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_system_mapping.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_system_mapping.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_system_mapping.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.ex_systems",
+					"caption": "Внешние системы",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_systems.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_systems.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_systems.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.ex_system_services",
+					"caption": "Внешние системы: сервисы",
+					"pcode": "nfc.ex_systems",
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_system_services.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_system_services.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_system_services.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.ex_system_serv_msgs",
+					"caption": "Внешние системы: сервисы: сообщения",
+					"pcode": "nfc.ex_system_services",
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_system_serv_msgs.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_system_serv_msgs.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ex_system_serv_msgs.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.files",
+					"caption": "Файлы системы",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "self",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.files.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.files.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.grp",
+					"caption": "Группы учетных единиц системы",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "self"
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.grp.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.grp.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.grp.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.menuroles",
+					"caption": "Настройка ограничений для пунктов меню",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.menuroles.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.menuroles.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.modulelist",
+					"caption": "Модули системы",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"primaryKey": "code::varchar",
+						"idGenMethod": "ext"
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.modulelist.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.modulelist.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.modulelist.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.options",
+					"caption": "Системные опции",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "ext",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.options.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.options.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.options.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.options_values",
+					"caption": "Системные опции : Переназначения",
+					"pcode": "nfc.options",
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": true,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.options_values.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.options_values.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.options_values.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.org",
+					"caption": "Учетные единицы системы",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "self"
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.org.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.org.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.org.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.password_policy",
+					"caption": "Парольная политика",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.password_policy.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.password_policy.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.password_policy.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.roles",
+					"caption": "Роли пользователей",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "self",
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.roles.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": null
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.roles.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": null
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.roles.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": null
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.role_unitbpprivs",
+					"caption": "Права ролей на действия в разделах",
+					"pcode": "nfc.role_unitprivs",
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.role_unitbpprivs.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.role_unitbpprivs.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.role_unitprivs",
+					"caption": "Права ролей на видимость разделов",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.role_unitprivs.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.role_unitprivs.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.ui_customization",
+					"caption": "Настройки и персонализация интерфейсных элементов",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ui_customization.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ui_customization.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.ui_customization.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.unitbps",
+					"caption": "Разделы системы : Действия",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "ext"
+					}
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.unit_files",
+					"caption": "Прикрепленные документы",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.unit_files.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.unit_files.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.unit_files.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.unit_file_types",
+					"caption": "Типы прикрепляемых документов по разделам",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useCatalogs": null,
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.unit_file_types.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.unit_file_types.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.unit_file_types.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.unitlist",
+					"caption": "Разделы системы",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "ext"
+					}
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.userroles",
+					"caption": "Назначенные роли пользователям",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "main",
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.userroles.add",
+								"caption": "Добавление",
+								"exec_function": null,
+								"use_privs": null
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.userroles.del",
+								"caption": "Удаление",
+								"exec_function": null,
+								"use_privs": null
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.userroles.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": null
+							}
+						}
+					]
+				}
+			},
+			{
+				"nfc.unitlist": {
+					"code": "nfc.users",
+					"caption": "Пользователи системы",
+					"pcode": null,
+					"mdl": "nfc",
+					"opt": {
+						"divideType": "sys",
+						"idGenMethod": "self",
+						"useChronicle": false,
+						"useHierarchy": false
+					},
+					"#details": [
+						{
+							"nfc.unitbps": {
+								"code": "nfc.users.add",
+								"caption": "Добавление",
+								"exec_function": "nfc.f4users8save",
+								"use_privs": false
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.users.check",
+								"caption": "Проверка",
+								"exec_function": "nfc.f4users8check",
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.users.del",
+								"caption": "Удаление",
+								"exec_function": "nfc.f4users8del",
+								"use_privs": false
+							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.users.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": false
+							}
+						}
+					]
+				}
+			}
+		]
+	}
+}
+]
