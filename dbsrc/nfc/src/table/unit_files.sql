@@ -20,7 +20,7 @@
             "datatype_length": null,
             "datatype_full": "bigint",
             "required": true,
-            "default_value": "nextval('nfc.s_main'::text::regclass)",
+            "default_value": "nextval('nfc.s4unit_files'::text::regclass)",
             "comment": null,
             "fk_tablename": null,
             "column_id": 1

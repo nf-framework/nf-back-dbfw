@@ -12,175 +12,8 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "ext",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "ext"
 					}
-				}
-			},
-			{
-				"nfc.unitlist": {
-					"code": "nfc.ex_system_mapping",
-					"caption": "Внешние системы : маппинг",
-					"pcode": "nfc.ex_systems",
-					"mdl": "nfc",
-					"opt": {
-						"divideType": "sys",
-						"idGenMethod": "self",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
-					},
-					"#details": [
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_system_mapping.add",
-								"caption": "Добавление",
-								"exec_function": null,
-								"use_privs": false
-							}
-						},
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_system_mapping.del",
-								"caption": "Удаление",
-								"exec_function": null,
-								"use_privs": false
-							}
-						},
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_system_mapping.upd",
-								"caption": "Исправление",
-								"exec_function": null,
-								"use_privs": false
-							}
-						}
-					]
-				}
-			},
-			{
-				"nfc.unitlist": {
-					"code": "nfc.ex_systems",
-					"caption": "Внешние системы",
-					"pcode": null,
-					"mdl": "nfc",
-					"opt": {
-						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
-					},
-					"#details": [
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_systems.add",
-								"caption": "Добавление",
-								"exec_function": null,
-								"use_privs": true
-							}
-						},
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_systems.del",
-								"caption": "Удаление",
-								"exec_function": null,
-								"use_privs": true
-							}
-						},
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_systems.upd",
-								"caption": "Исправление",
-								"exec_function": null,
-								"use_privs": true
-							}
-						}
-					]
-				}
-			},
-			{
-				"nfc.unitlist": {
-					"code": "nfc.ex_system_services",
-					"caption": "Внешние системы: сервисы",
-					"pcode": "nfc.ex_systems",
-					"mdl": "nfc",
-					"opt": {
-						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
-					},
-					"#details": [
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_system_services.add",
-								"caption": "Добавление",
-								"exec_function": null,
-								"use_privs": true
-							}
-						},
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_system_services.del",
-								"caption": "Удаление",
-								"exec_function": null,
-								"use_privs": true
-							}
-						},
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_system_services.upd",
-								"caption": "Исправление",
-								"exec_function": null,
-								"use_privs": true
-							}
-						}
-					]
-				}
-			},
-			{
-				"nfc.unitlist": {
-					"code": "nfc.ex_system_serv_msgs",
-					"caption": "Внешние системы: сервисы: сообщения",
-					"pcode": "nfc.ex_system_services",
-					"mdl": "nfc",
-					"opt": {
-						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
-					},
-					"#details": [
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_system_serv_msgs.add",
-								"caption": "Добавление",
-								"exec_function": null,
-								"use_privs": true
-							}
-						},
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_system_serv_msgs.del",
-								"caption": "Удаление",
-								"exec_function": null,
-								"use_privs": true
-							}
-						},
-						{
-							"nfc.unitbps": {
-								"code": "nfc.ex_system_serv_msgs.upd",
-								"caption": "Исправление",
-								"exec_function": null,
-								"use_privs": true
-							}
-						}
-					]
 				}
 			},
 			{
@@ -191,10 +24,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "self",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "self"
 					},
 					"#details": [
 						{
@@ -262,10 +92,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "main"
 					},
 					"#details": [
 						{
@@ -295,7 +122,6 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"primaryKey": "code::varchar",
 						"idGenMethod": "ext"
 					},
 					"#details": [
@@ -334,10 +160,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "ext",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "ext"
 					},
 					"#details": [
 						{
@@ -375,10 +198,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": true,
-						"useHierarchy": false
+						"idGenMethod": "main"
 					},
 					"#details": [
 						{
@@ -454,10 +274,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "main"
 					},
 					"#details": [
 						{
@@ -495,9 +312,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "self",
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "self"
 					},
 					"#details": [
 						{
@@ -535,10 +350,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "main"
 					},
 					"#details": [
 						{
@@ -568,10 +380,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "main"
 					},
 					"#details": [
 						{
@@ -601,10 +410,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "main"
 					},
 					"#details": [
 						{
@@ -653,11 +459,9 @@
 					"pcode": null,
 					"mdl": "nfc",
 					"opt": {
+						"__changed": true,
 						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "self"
 					},
 					"#details": [
 						{
@@ -695,10 +499,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "main",
-						"useCatalogs": null,
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "main"
 					},
 					"#details": [
 						{
@@ -748,9 +549,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "main",
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "main"
 					},
 					"#details": [
 						{
@@ -788,9 +587,7 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "self",
-						"useChronicle": false,
-						"useHierarchy": false
+						"idGenMethod": "self"
 					},
 					"#details": [
 						{
