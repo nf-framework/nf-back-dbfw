@@ -1,5 +1,5 @@
 CREATE OR REPLACE FUNCTION nfc.f_broker8exec(p_action text, p_params json, p_options json DEFAULT '{}'::json)
- RETURNS json
+ RETURNS text
  LANGUAGE plpgsql
  SECURITY DEFINER
 AS $function$declare
