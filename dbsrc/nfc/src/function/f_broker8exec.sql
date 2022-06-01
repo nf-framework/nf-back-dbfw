@@ -7,6 +7,7 @@ AS $function$declare
     v_act text = p_options->>'act';
     v_pk_field text = p_options->>'pkField';
     v_divide_type text = p_options->>'divideType';
+    v_use_privs boolean = p_options->>'usePrivs';
     v_org int8;
     v_grp int8;
     v_unit_id text;
@@ -18,7 +19,7 @@ begin
     end if;
     v_unit_id = p_params->>v_pk_field;
     -- выполнение
-    perform nfc.f_bp8before(v_unitbp, v_unit_id, v_org, v_grp, null);
+    perform nfc.f_bp8before(v_unitbp, v_unit_id, v_org, v_grp, null, v_use_privs);
     if v_act = 'add' then
         execute p_action into v_unit_id using p_params,(case when v_divide_type = 'org' then v_org when v_divide_type = 'grp' then v_grp else null end);
     else 
