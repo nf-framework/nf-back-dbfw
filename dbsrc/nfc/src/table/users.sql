@@ -32,9 +32,20 @@
             "datatype_full": "bigint",
             "required": true,
             "default_value": "nextval('nfc.s4users'::text::regclass)",
-            "comment": null,
+            "comment": "Идентификатор",
             "fk_tablename": null,
             "column_id": 1
+        },
+        {
+            "name": "password",
+            "datatype": "text",
+            "datatype_length": null,
+            "datatype_full": "text",
+            "required": false,
+            "default_value": null,
+            "comment": "Пароль",
+            "fk_tablename": null,
+            "column_id": 5
         },
         {
             "name": "username",

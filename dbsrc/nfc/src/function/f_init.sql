@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION nfc.f_init(p_username character varying, p_password character varying, p_rolename text DEFAULT NULL::text)
+CREATE OR REPLACE FUNCTION nfc.f_init(p_username character varying, p_password character varying, p_rolename text DEFAULT NULL::text, p_options json DEFAULT NULL::json)
  RETURNS void
  LANGUAGE plpgsql
  SECURITY DEFINER
@@ -10,17 +10,24 @@ declare
     v_user_id bigint;
     v_role_id bigint;
     v_rup bigint;
+    v_logon_kind text;
+    v_password text;
 begin
-    if nfc.f_db8obj_exist('role',p_username) is null then 
-        execute format('create role %I login in role nfusr',p_username);
-        if p_password is not null then 
-            execute format('alter role %I password %s',p_username,quote_literal(p_password));
+    v_logon_kind = coalesce(p_options->>'logonKind', 'user');
+    if v_logon_kind = 'user' then
+        if nfc.f_db8obj_exist('role',p_username) is null then 
+            execute format('create role %I login in role nfusr',p_username);
+            if p_password is not null then 
+                execute format('alter role %I password %s',p_username,quote_literal(p_password));
+            end if;
         end if;
+    else 
+        v_password = crypt(p_password, gen_salt('bf', 10));
     end if;
     select id into v_user_id from nfc.users where username = p_username;
     if v_user_id is null then  
-        insert into nfc.users (username, fullname)
-        values (p_username, p_username) returning id into v_user_id;
+        insert into nfc.users (username, fullname, password, extra)
+        values (p_username, p_username, v_password, p_options) returning id into v_user_id;
     end if;
     v_rolename = coalesce(p_rolename,p_username);
     select id into v_role_id from nfc.roles where code = v_rolename;    
