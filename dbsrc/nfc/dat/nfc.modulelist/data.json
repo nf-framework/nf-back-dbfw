@@ -600,6 +600,14 @@
 						},
 						{
 							"nfc.unitbps": {
+								"code": "nfc.users.change_password",
+								"caption": "Смена пароля",
+								"exec_function": null,
+								"use_privs": true
+							}
+						},
+						{
+							"nfc.unitbps": {
 								"code": "nfc.users.del",
 								"caption": "Удаление",
 								"exec_function": "nfc.f4users8del",
