@@ -8,6 +8,7 @@ import * as rolesEi from "./lib/roles/ei.js";
 import { providerBroker } from './lib/broker.js';
 import { getMenu, getFullMenu } from "./lib/menu.js";
 import * as customizations from "./lib/customizations.js";
+import { download, upload } from './lib/file-storage.js';
 
 const meta = {
     require: {
@@ -40,6 +41,9 @@ async function init() {
 
     web.on('POST', '/front/action/getMenu', { middleware: ['session'], override: true }, getMenu);
     web.on('POST', '/front/action/getFullMenu', { middleware: ['session'], override: true }, getFullMenu);
+
+    web.on('POST', '/@nfjs/upload', { middleware: ['session', 'auth', 'files'] }, upload);
+    web.on('GET', '/@nfjs/download/:fileName', { middleware: ['session', 'auth'] }, download);
 }
 
 export {
