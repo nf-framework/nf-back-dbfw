@@ -42,6 +42,14 @@
 								"exec_function": null,
 								"use_privs": true
 							}
+						},
+						{
+							"nfc.unitbps": {
+								"code": "nfc.files.upd",
+								"caption": "Исправление",
+								"exec_function": null,
+								"use_privs": true
+							}
 						}
 					]
 				}
