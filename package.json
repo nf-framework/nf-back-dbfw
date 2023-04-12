@@ -1,6 +1,6 @@
 {
     "name": "@nfjs/back-dbfw",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "Backend DB framework",
     "license": "MIT",
     "type": "module",
