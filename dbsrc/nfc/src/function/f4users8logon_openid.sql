@@ -7,13 +7,13 @@ AS $function$declare
     v_grp int8;
     v_userforms text;
     v_roles text[];
-    v_org int8 = (p_extra->>'org')::int8;
-    v_roles_scope text = p_extra->>'roles_scope';
+    v_org int8 = (p_extra->>'_org')::int8;
+    v_roles_scope text = p_extra->>'_roles_scope';
     v_ text;
 begin
     select array_agg(p)
       into v_roles
-      from json_array_elements_text(p_extra->'roles') as p(p);
+      from json_array_elements_text(p_extra->'_roles') as p(p);
     select * into v_user from nfc.users where username = p_username;
     if v_user is null then
         insert into nfc.users (username, fullname, extra) 
