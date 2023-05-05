@@ -1,7 +1,6 @@
 CREATE OR REPLACE FUNCTION nfc.f_db8get_hierarchy_path(p_schema text, p_tablename text, p_field text, p_delimiter text, p_key text, p_pkey text, p_key_value text)
  RETURNS text
  LANGUAGE plpgsql
- SECURITY DEFINER
 AS $function$
 declare 
   v_sql text;

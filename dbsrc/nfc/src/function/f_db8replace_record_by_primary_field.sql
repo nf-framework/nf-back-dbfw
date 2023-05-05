@@ -1,7 +1,6 @@
 CREATE OR REPLACE FUNCTION nfc.f_db8replace_record_by_primary_field(p_tablename text, p_old text, p_new text, p_exclude text[], p_notice boolean DEFAULT false)
  RETURNS void
  LANGUAGE plpgsql
- SECURITY DEFINER
 AS $function$
 declare
   x record;
