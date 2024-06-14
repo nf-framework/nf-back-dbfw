@@ -8,6 +8,7 @@ import { NfcUnitFileTypesOrigin } from './origin/NfcUnitFileTypes.js';
 import { NfcUnitFilesOrigin } from './origin/NfcUnitFiles.js';
 import { NfcRoleUnitprivsOrigin } from './origin/NfcRoleUnitprivs.js';
 import { NfcRoleUnitbpprivsOrigin } from './origin/NfcRoleUnitbpprivs.js';
+import { NfcMenuRolesOrigin } from './origin/NfcMenuRolesOrigin.js';
 
 export class NfcRoles extends NfcRolesOrigin {}
 
@@ -54,3 +55,5 @@ export class NfcRoleUnitbpprivs extends NfcRoleUnitbpprivsOrigin {
         return res;
     }
 }
+
+export class NfcMenuRoles extends NfcMenuRolesOrigin {}
