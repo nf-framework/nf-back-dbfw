@@ -29,7 +29,7 @@ async function init() {
     });
     // экспорт, импорт настроек ролей
     web.on('GET', '/@nfjs/back-dbfw/api/roles/exportRoleUnitPrivs', { middleware: ['session', 'query'] }, rolesEi.exportRoleUnitPrivs);
-    web.on('PUT', '/@nfjs/back-dbfw/api/roles/importRoleUnitPrivs/upload', { middleware: ['files', 'session'] }, rolesEi.importRoleUnitPrivs)
+    web.on('POST', '/@nfjs/back-dbfw/api/roles/importRoleUnitPrivs/upload', { middleware: ['files', 'session'] }, rolesEi.importRoleUnitPrivs)
 
     authProviders['fw'] = new AuthProvider();
 
