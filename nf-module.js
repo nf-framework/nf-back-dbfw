@@ -9,6 +9,7 @@ import { providerBroker } from './lib/broker.js';
 import { getMenu, getFullMenu } from "./lib/menu.js";
 import * as customizations from "./lib/customizations.js";
 import { download, upload } from './lib/file-storage.js';
+import * as dictionary from "./lib/dictionary.js";
 
 const meta = {
     require: {
@@ -44,6 +45,8 @@ async function init() {
 
     web.on('POST', '/@nfjs/upload', { middleware: ['session', 'auth', 'files'] }, upload);
     web.on('GET', '/@nfjs/download/:fileName', { middleware: ['session', 'auth'] }, download);
+
+    web.on('POST', '/@nfjs/dictionary/values', { middleware: ['session', 'auth', 'json'] }, dictionary.valuesHandler);
 }
 
 export {
