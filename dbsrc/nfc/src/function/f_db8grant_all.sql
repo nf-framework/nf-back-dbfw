@@ -16,7 +16,7 @@ for r in (select c.relname as tablename,
            where c.relnamespace = nc.oid 
              and c.relkind = 'v'
              and u.code = nc.nspname
-             and not pg_catalog.has_table_privilege('nfusr', format('%I.%I',nc.nspname,c.relname), 'select'))
+             and not pg_catalog.has_table_privilege('nfusr', c.oid, 'select'))
 loop 
     execute format('grant select on %I.%I to nfusr', r.schemaname, r.tablename);
 end loop;  
@@ -36,7 +36,7 @@ for r in (select nc.nspname
             from pg_catalog.pg_namespace nc,
                  nfc.modulelist u
            where u.code = nc.nspname
-             and not pg_catalog.has_schema_privilege('nfusr', format('%I',nc.nspname) , 'usage'))
+             and not pg_catalog.has_schema_privilege('nfusr', nc.oid , 'usage'))
 loop  
     execute format('grant usage on schema %I to nfusr', r.nspname);  
 end loop;
@@ -47,7 +47,7 @@ if nfc.f_db8obj_exist('role','nftst') is not null then
 	            from pg_catalog.pg_namespace nc,
 	                 nfc.modulelist u
 	           where u.code = nc.nspname
-	             and not pg_catalog.has_schema_privilege('nftst', format('%I',nc.nspname) , 'usage'))
+	             and not pg_catalog.has_schema_privilege('nftst', nc.oid , 'usage'))
 	loop  
 	    execute format('grant usage on schema %I to nftst', r.nspname);  
 	end loop;
@@ -55,10 +55,10 @@ if nfc.f_db8obj_exist('role','nftst') is not null then
 	for r in (select t.*
   				from (select c.relname as tablename,
 						     nc.nspname as schemaname,
-						     pg_catalog.has_table_privilege('nftst', format('%I.%I',nc.nspname,c.relname), 'select') as can_select,
-						     pg_catalog.has_table_privilege('nftst', format('%I.%I',nc.nspname,c.relname), 'insert') as can_insert,
-						     pg_catalog.has_table_privilege('nftst', format('%I.%I',nc.nspname,c.relname), 'update') as can_update,
-						     pg_catalog.has_table_privilege('nftst', format('%I.%I',nc.nspname,c.relname), 'delete') as can_delete
+						     pg_catalog.has_table_privilege('nftst', c.oid, 'select') as can_select,
+						     pg_catalog.has_table_privilege('nftst', c.oid, 'insert') as can_insert,
+						     pg_catalog.has_table_privilege('nftst', c.oid, 'update') as can_update,
+						     pg_catalog.has_table_privilege('nftst', c.oid, 'delete') as can_delete
 						    from pg_catalog.pg_class c,
 						         pg_catalog.pg_namespace nc,
 						         nfc.modulelist u
@@ -81,15 +81,15 @@ if nfc.f_db8obj_exist('role','nftst') is not null then
 		end if;
 	end loop; 
 	-- использование(генерация следующего значения) последовательностей
-	for r in (select c.relname as tablename,
-	                 nc.nspname as schemaname
-	            from pg_catalog.pg_class c,
-	                 pg_catalog.pg_namespace nc,
-	                 nfc.modulelist u
-	           where c.relnamespace = nc.oid 
-	             and c.relkind = 'S'
-	             and u.code = nc.nspname
-	             and not pg_catalog.has_sequence_privilege('nftst', format('%I.%I',nc.nspname,c.relname), 'usage'))
+	for r in (select * from (select c.relname as tablename,
+                     nc.nspname as schemaname,
+                      case when c.relkind = 'S' then pg_catalog.has_sequence_privilege('nftst', c.oid, 'usage') else true end can_usage
+                from pg_catalog.pg_class c,
+                     pg_catalog.pg_namespace nc,
+                     nfc.modulelist u
+               where c.relnamespace = nc.oid 
+                 and c.relkind = 'S'
+                 and u.code = nc.nspname) s where not s.can_usage)
 	loop 
 	    execute format('grant usage on %I.%I to nftst', r.schemaname, r.tablename);
 	end loop;
@@ -101,7 +101,7 @@ if nfc.f_db8obj_exist('role','nfobs') is not null then
 	            from pg_catalog.pg_namespace nc,
 	                 nfc.modulelist u
 	           where u.code = nc.nspname
-	             and not pg_catalog.has_schema_privilege('nfobs', format('%I',nc.nspname) , 'usage'))
+	             and not pg_catalog.has_schema_privilege('nfobs', nc.oid, 'usage'))
 	loop  
 	    execute format('grant usage on schema %I to nfobs', r.nspname);  
 	end loop;
@@ -114,7 +114,7 @@ if nfc.f_db8obj_exist('role','nfobs') is not null then
 	           where c.relnamespace = nc.oid 
 	             and c.relkind = 'r'
 	             and u.code = nc.nspname
-	             and not pg_catalog.has_table_privilege('nfobs', format('%I.%I',nc.nspname,c.relname), 'select'))
+	             and not pg_catalog.has_table_privilege('nfobs', c.oid, 'select'))
 	loop 
 	    execute format('grant select on %I.%I to nfobs', r.schemaname, r.tablename);
 	end loop;
