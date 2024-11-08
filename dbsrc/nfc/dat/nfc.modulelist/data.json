@@ -320,7 +320,8 @@
 					"mdl": "nfc",
 					"opt": {
 						"divideType": "sys",
-						"idGenMethod": "self"
+						"idGenMethod": "self",
+						"isDictionary": true
 					},
 					"#details": [
 						{
