@@ -43,9 +43,9 @@
             "schema": "nfc",
             "type": "f",
             "update_rule": "a",
-            "delete_rule": "c",
+            "delete_rule": "a",
             "condition": null,
-            "definition": "FOREIGN KEY (role_id) REFERENCES nfc.roles(id) ON DELETE CASCADE",
+            "definition": "FOREIGN KEY (role_id) REFERENCES nfc.roles(id)",
             "r_schema": "nfc",
             "r_tablename": "roles",
             "r_columnname": "id",
@@ -65,6 +65,21 @@
             "r_tablename": null,
             "r_columnname": null,
             "columns": "id",
+            "comment": null,
+            "deferrable": null
+        },
+        {
+            "name": "uk4menuroles8menuguid",
+            "schema": "nfc",
+            "type": "u",
+            "update_rule": null,
+            "delete_rule": null,
+            "condition": null,
+            "definition": "UNIQUE (role_id, menuguid)",
+            "r_schema": null,
+            "r_tablename": null,
+            "r_columnname": null,
+            "columns": "role_id,menuguid",
             "comment": null,
             "deferrable": null
         }
