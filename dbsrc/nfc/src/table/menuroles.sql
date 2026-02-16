@@ -84,28 +84,5 @@
             "deferrable": null
         }
     ],
-    "indx": [
-        {
-            "name": "i4menuroles",
-            "schema": "nfc",
-            "columns": [
-                {
-                    "name": "menuguid",
-                    "nulls": "last",
-                    "order": "asc",
-                    "collate": null
-                },
-                {
-                    "name": "role_id",
-                    "nulls": "last",
-                    "order": "asc",
-                    "collate": null
-                }
-            ],
-            "is_unique": true,
-            "method": "btree",
-            "tablespace": null,
-            "definition": "CREATE UNIQUE INDEX i4menuroles ON nfc.menuroles USING btree (menuguid, role_id)"
-        }
-    ]
+    "indx": null
 }
