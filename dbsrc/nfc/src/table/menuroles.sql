@@ -67,30 +67,22 @@
             "columns": "id",
             "comment": null,
             "deferrable": null
+        },
+        {
+            "name": "uk4menuroles8menuguid",
+            "schema": "nfc",
+            "type": "u",
+            "update_rule": null,
+            "delete_rule": null,
+            "condition": null,
+            "definition": "UNIQUE (role_id, menuguid)",
+            "r_schema": null,
+            "r_tablename": null,
+            "r_columnname": null,
+            "columns": "role_id,menuguid",
+            "comment": null,
+            "deferrable": null
         }
     ],
-    "indx": [
-        {
-            "name": "i4menuroles",
-            "schema": "nfc",
-            "columns": [
-                {
-                    "name": "menuguid",
-                    "nulls": "last",
-                    "order": "asc",
-                    "collate": null
-                },
-                {
-                    "name": "role_id",
-                    "nulls": "last",
-                    "order": "asc",
-                    "collate": null
-                }
-            ],
-            "is_unique": true,
-            "method": "btree",
-            "tablespace": null,
-            "definition": "CREATE UNIQUE INDEX i4menuroles ON nfc.menuroles USING btree (menuguid, role_id)"
-        }
-    ]
+    "indx": null
 }
